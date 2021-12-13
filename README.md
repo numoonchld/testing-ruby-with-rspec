@@ -23,5 +23,16 @@
   ```
 
 - examples are tests that sit inside an example group
+
   - use `it` blocks for examples themselves in the example group block
   - `specify` is an alias for `it`
+
+- `expect` is an `rspec` method to set expectations within an example
+  - these `expect` statements are called assertions
+
+### To run the tests
+
+- three ways:
+  1. run all tests in the root dir and the nested dirs i.e. the entire project by simply doing `rspec` in the CLI
+  2. do `rspec spec/card_spec.rb` to run all test groups in an individual file
+  3. do `rspec ./spec/card_spec.rb:3` i.e. with the line number to run only that line's example
