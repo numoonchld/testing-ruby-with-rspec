@@ -64,3 +64,22 @@
   ```
 
   - other parameters that `before` can take are `:suit` and `:context`
+
+#### `let` method
+
+- useful to reduce duplication of instance varibles for each example
+  - will be the go to method for reducing duplication
+  - `let` is a way to memoize (cache) something given to it
+
+```ruby
+  let(:card) { Card.new('Ace','Spades')}
+```
+
+- `let` instanciates a new item specifed before each example (i.e. `it` block)
+  - `let` by default implments lazy-loading
+    - i.e. creates a card only at the time it needs to exist
+    - `let!()` bypasses lazy loading
+
+### Custom error message for assertions
+
+- `.to` takes a second argument (a string) that is the message to show when the assertion fails
