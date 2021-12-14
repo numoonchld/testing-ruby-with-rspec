@@ -12,7 +12,7 @@
 
 - `rspec --init`
 
-## Notes
+# Notes
 
 - example group block:
 
