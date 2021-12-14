@@ -39,3 +39,12 @@
   1. run all tests in the root dir and the nested dirs i.e. the entire project by simply doing `rspec` in the CLI
   2. do `rspec spec/card_spec.rb` to run all test groups in an individual file
   3. do `rspec ./spec/card_spec.rb:3` i.e. with the line number to run only that line's example
+
+### Mutation and instance variables
+
+- be careful of mutation of variables in the sequence of test example execution
+  - sometimes it makes more sense to have isolated duplicate instance varible creation in examples
+
+### Hooks
+
+- code that runs automatically at the time of test suit execution
