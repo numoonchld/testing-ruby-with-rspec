@@ -28,7 +28,10 @@
   - `specify` is an alias for `it`
 
 - `expect` is an `rspec` method to set expectations within an example
+
   - these `expect` statements are called assertions
+
+- a single example can have multilpe assertions/expectations
 
 ### To run the tests
 
