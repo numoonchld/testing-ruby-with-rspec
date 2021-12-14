@@ -48,3 +48,17 @@
 ### Hooks
 
 - code that runs automatically at the time of test suit execution
+
+```ruby
+  before do
+    ...
+  end
+```
+
+is the same as
+
+```ruby
+  before(:example) do
+    ...
+  end
+```

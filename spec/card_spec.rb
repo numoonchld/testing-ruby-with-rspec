@@ -1,6 +1,6 @@
 class Card
   attr_reader :rank, :suit
-  
+
   def initialize(rank, suit)
     @rank = rank
     @suit = suit
@@ -8,7 +8,10 @@ class Card
 end
 
 RSpec.describe Card do 
-  # specify is an alias for it
+
+  before do
+  end
+
   it 'has a rank' do 
     card = Card.new('Ace', 'Spades')
     expect(card.rank).to eq 'Ace'
