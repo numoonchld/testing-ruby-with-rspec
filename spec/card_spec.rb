@@ -5,7 +5,7 @@ class Card
   end
 end
 
-RSpec.describe 'Card' do 
+RSpec.describe Card do 
   # specify is an alias for it
   it 'has a type' do  
     card = Card.new('Ace of Spades')
