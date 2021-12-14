@@ -83,3 +83,11 @@
 ### Custom error message for assertions
 
 - `.to` takes a second argument (a string) that is the message to show when the assertion fails
+
+### `describe`/`context`
+
+- they are aliases of each other
+- while `it`/`specify` should be matter of fact statements
+  - more abstract ideas should use `describe`/`context`
+  - do not try to stuff complex scenario descriptions in an `it` (example's) docstring
+- use as many nested `describe`/`context` as necessary to structure the test in a readable manner
