@@ -131,3 +131,9 @@
 - `RSpec.shared_context` to create shared context - in a `do..end` block
 - `include_context` to load shared context
   - refer to by definiton docstring
+
+### `eq`, `eql`, `equal/be`
+
+- `eq`: checks for value sameness with type coercion
+- `eql`: checks for value sameness without type coercion
+- `equal/be`: checks for same memory location (obviously along with value sameness)
