@@ -119,3 +119,15 @@
     end
   end
   ```
+
+### Shared Examples
+
+- `RSpec.shared_examples` to create shared examples - in a `do..end` block
+- `include_examples` - to call the shared examples
+  - refer to by the docstring used to define the shared examples block
+
+### Shared Context
+
+- `RSpec.shared_context` to create shared context - in a `do..end` block
+- `include_context` to load shared context
+  - refer to by definiton docstring
