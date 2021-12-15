@@ -102,4 +102,20 @@
   - explictly can be called with a `do..end` block to lazy load an explicit definition of an instance of the described class
 
 - `described_class`:
+
   - dynamically refers to the class passed in as an argument to `RSpec.describe`
+
+- `is_expected`:
+
+  - one liner assertion with the `it` keyword
+  - utilizes the `subject` defined directly
+
+  ```ruby
+  RSpec.describe 'shorthand_syntax' do
+    subject { 5 }
+
+    context 'with one-liner syntax' do
+      it { is_expected.to eq 5 }
+    end
+  end
+  ```
