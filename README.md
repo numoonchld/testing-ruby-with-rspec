@@ -65,6 +65,8 @@
 
   - other parameters that `before` can take are `:suit` and `:context`
 
+- `after` is another hook
+
 #### `let` method
 
 - useful to reduce duplication of instance varibles for each example
@@ -91,3 +93,13 @@
   - more abstract ideas should use `describe`/`context`
   - do not try to stuff complex scenario descriptions in an `it` (example's) docstring
 - use as many nested `describe`/`context` as necessary to structure the test in a readable manner
+
+## RSpec helpers
+
+- `subject`:
+
+  - implicity an instance of the class passed to `RSpec.describe`
+  - explictly can be called with a `do..end` block to lazy load an explicit definition of an instance of the described class
+
+- `described_class`:
+  - dynamically refers to the class passed in as an argument to `RSpec.describe`
