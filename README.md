@@ -137,3 +137,51 @@
 - `eq`: checks for value sameness with type coercion
 - `eql`: checks for value sameness without type coercion
 - `equal/be`: checks for same memory location (obviously along with value sameness)
+
+## Predicate methods
+
+- methods with `?` at the end of a method name
+  - it always returns a boolean
+- the `?` is not a technical specification per-se but a popular community standard
+
+- examples
+
+  ```ruby
+  puts 0.zero? # true
+  puts 15.zero? # false
+
+  puts 2.even? # true
+  puts 3.even? # false
+
+  puts 3.odd? # true
+  puts 2.odd? # false
+
+  puts [].empty? # true
+  puts [1, 2].empty? # false
+  ```
+
+### Predicate matcher
+
+- `be_<predicate_method_name>`
+
+#### Example
+
+```ruby
+RSpec.describe 'predicate methods and predicate matchers' do
+  it 'can be tested with Ruby methods' do
+    result = 16 / 2
+    expect(result.even?).to eq true
+  end
+
+  it 'can be tested with predicate matchers' do
+    expect(16 / 2).to be_even
+    expect(15).to be_odd
+    expect(0).to be_zero
+    expect([]).to be_empty
+  end
+
+  describe 0 do
+    it { is_expected.to be_zero}
+  end
+end
+```
