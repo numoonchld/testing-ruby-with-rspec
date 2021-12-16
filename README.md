@@ -185,3 +185,14 @@ RSpec.describe 'predicate methods and predicate matchers' do
   end
 end
 ```
+
+## Truthy and falsy values
+
+- in Ruby land, only two entites are falsy
+  - `false`
+  - `nil`
+- eveything else is truthy
+  - strings, and empty strings
+  - arrays, and empty arrays
+  - numbers, positive and negative, and 0
+  - hashes and symbols
